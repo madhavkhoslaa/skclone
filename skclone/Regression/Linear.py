@@ -1,7 +1,7 @@
 
 class Linear():
-    """Stuff involving Linear Regression. For both parametric
-                     and non parametric approaches"""
+    """Performs the least squares regression aka linear 
+	regression on the data "fitted" onto its instance"""
 
     def __init__(self):
         self.coef = 0
