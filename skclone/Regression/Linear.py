@@ -17,7 +17,12 @@ class Linear():
         m1 = [_ - self.x_bar for _ in self.X]
         m2 = [_ - self.y_bar for _ in self.y]
         d1 = [(_ - self.x_bar)**2 for _ in self.X]
-        return 0
+        numer = []
+        for _ in range(len(X)):
+        	numer[_] = m1[_] * m2[_]
+
+        self.coef = sum(numer)/sum(d1)
+        self.bias = self.y_bar - self.coef*(self.x_bar)
 
     def predict(self, data):
-        pass
+        return = self.coef*data + self.bias
